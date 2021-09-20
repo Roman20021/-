@@ -42,8 +42,8 @@ with open('./data.json', 'w', encoding='utf8') as f:
 
 with open('./data.json', 'r') as file:
     data = json.load(file)
-nameClient = input()
-TripDat = input()
+nameClient = "Роман"
+TripDat = '2021'
 
 for dat in data['db']['Trips']:
     if dat['date'] == TripDat and dat['client']['name'] == nameClient:
