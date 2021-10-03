@@ -1,0 +1,20 @@
+1 -----------
+select *from flights
+WHERE (flights.departure_airport='KZN') AND (flights.arrival_airport='KRR')
+1 -------------
+2 -----------------
+select *from flights where(flights.scheduled_arrival - scheduled_departure = '00:25:00') and (flights.departure_airport='VKO')
+2------------------------
+3 -------------------
+select *from flights join airports_data on
+(airports_data.timezone = 'Europe/Moscow') 
+and (departure_airport in (select airport_code from airports_data)) 
+and (arrival_airport in (select airport_code from airports_data))
+3-------------------
+
+
+
+
+
+
+
