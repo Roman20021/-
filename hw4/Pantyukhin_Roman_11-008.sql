@@ -6,5 +6,5 @@ SELECT * FROM flights WHERE (flights.scheduled_arrival - scheduled_departure = '
 
 SELECT * FROM flights JOIN airports_data ON 
 (flights.departure_airport = airports_data.airport_code OR flights.arrival_airport = airports_data.airport_code) 
-AND (departure_airport IN (select airport_code FROM airports_data)) 
-AND (arrival_airport IN (select airport_code FROM airports_data));
+AND (departure_airport IN (select airport_code FROM airports_data WHERE airports_data.timezone = 'Europe/Moscow')) 
+AND (arrival_airport IN (select airport_code FROM airports_data WHERE airports_data.timezone = 'Europe/Moscow'));
