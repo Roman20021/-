@@ -6,5 +6,5 @@ SELECT *FROM flights WHERE (flights.scheduled_arrival - scheduled_departure = '0
 
 SELECT *FROM flights WHERE JOIN airports_data ON 
 (flights.departure_airport = airports_data.airport_code OR flights.arrival_airport = airports_data.airport_code) 
-AND (departure_airport in (select airport_code FROM airports_data)) 
-AND (arrival_airport in (select airport_code FROM airports_data))
+AND (departure_airport IN (select airport_code FROM airports_data)) 
+AND (arrival_airport IN (select airport_code FROM airports_data))
