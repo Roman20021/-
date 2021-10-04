@@ -1,6 +1,6 @@
 \c demo
 
-SELECT *FROM flights WHERE (flights.departure_airport='KZN') AND (flights.arrival_airport='KRR')
+SELECT *FROM flights WHERE (flights.departure_airport='KZN') AND (flights.arrival_airport='MQF')
 
 SELECT *FROM flights WHERE (flights.scheduled_arrival - scheduled_departure = '00:25:00') AND (flights.departure_airport='VKO')
 
