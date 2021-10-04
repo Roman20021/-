@@ -2,7 +2,7 @@
 
 SELECT * FROM flights WHERE (flights.departure_airport='KZN') AND (flights.arrival_airport='MQF');
 
-SELECT * FROM flights WHERE (flights.scheduled_arrival - scheduled_departure = '00:25:00') AND (flights.departure_airport='VKO');
+SELECT * FROM flights WHERE (flights.scheduled_arrival - scheduled_departure = '01:25:00') AND (flights.departure_airport='DME');
 
 SELECT * FROM flights JOIN airports_data ON 
 (flights.departure_airport = airports_data.airport_code OR flights.arrival_airport = airports_data.airport_code) 
